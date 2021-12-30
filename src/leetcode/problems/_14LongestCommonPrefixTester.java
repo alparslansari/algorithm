@@ -8,11 +8,11 @@ public class _14LongestCommonPrefixTester {
         TesterHelper helper = new TesterHelper();
         String[] strs = {"flower","flow","flight"};
         String expected = "fl";
-        helper.check(expected,tester.longestCommonPrefix(strs));
+        helper.check(expected,tester.longestCommonPrefixByHorizontalScan(strs));
 
         String[] strs1 = {"dog","racecar","car"};
         expected = "";
-        helper.check(expected,tester.longestCommonPrefix(strs1));
+        helper.check(expected,tester.longestCommonPrefixByHorizontalScan(strs1));
 
     }
 }
