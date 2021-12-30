@@ -10,5 +10,9 @@ public class _14LongestCommonPrefixTester {
         String expected = "fl";
         helper.check(expected,tester.longestCommonPrefix(strs));
 
+        String[] strs1 = {"dog","racecar","car"};
+        expected = "";
+        helper.check(expected,tester.longestCommonPrefix(strs1));
+
     }
 }
