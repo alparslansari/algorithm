@@ -19,7 +19,8 @@ package leetcode.problems;
  *     strs[i] consists of only lower-case English letters.
  */
 public class _14LongestCommonPrefix {
-    public String longestCommonPrefix(String[] strs){
+    // Approach 1: Horizontal scanning
+    public String longestCommonPrefixByHorizontalScan(String[] strs){
         if(strs.length == 0) return "";
         String prefix = strs[0];
         for(int i=1;i<strs.length;i++)
@@ -28,5 +29,20 @@ public class _14LongestCommonPrefix {
                 if(prefix.isEmpty()) return "";
             }
         return prefix;
+    }
+
+    // Approach 2: Vertical scanning
+    public String longestCommonPrefix(String[] strs) {
+        if(strs==null || strs.length==0) return "";
+        for(int i=0;i< strs.length;i++)
+        {
+            char c = strs[0].charAt(i);
+            for(int j = 1; j<strs.length; j++)
+            {
+                if(i==strs[j].length() || strs[j].charAt(i)!=c)
+                    return strs[0].substring(0,i);
+            }
+        }
+        return strs[0];
     }
 }
