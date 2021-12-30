@@ -47,6 +47,36 @@ public class TesterHelper {
         }
     }
 
+    public boolean check(int[] expected, int[] output)
+    {
+        System.out.println("expected= "+Arrays.toString(expected));
+        System.out.println("output= "+Arrays.toString(output));
+
+        if(Arrays.equals(expected, output)) {
+            print(PASSED,expected,output);
+            return true;
+        } else
+        {
+            print(FAILED,expected,output);
+            return false;
+        }
+    }
+
+    public <T> boolean check(T[] expected, T[] output)
+    {
+        System.out.println("expected= "+Arrays.toString(expected));
+        System.out.println("output= "+Arrays.toString(output));
+
+        if(Arrays.equals(expected, output)) {
+            print(PASSED,expected,output);
+            return true;
+        } else
+        {
+            print(FAILED,expected,output);
+            return false;
+        }
+    }
+
     private <T> void print(String msg, T expected, T output){
         System.out.println(msg+" Expected="+expected+" Output="+output);
     }
