@@ -9,14 +9,16 @@ public class _151ReverseWordsTester {
         String s = "the sky is blue";
         String expected = "blue is sky the";
         helper.check(expected, tester.reverseWordsBuiltIn(s));
+        helper.check(expected, tester.reverseWords(s));
 
         s = "  hello world  ";
         expected = "world hello";
         helper.check(expected, tester.reverseWordsBuiltIn(s));
+        helper.check(expected, tester.reverseWords(s));
 
         s = "a good   example";
         expected = "example good a";
         helper.check(expected, tester.reverseWordsBuiltIn(s));
-
+        helper.check(expected, tester.reverseWords(s));
     }
 }

@@ -1,8 +1,6 @@
 package leetcode.problems;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /** 151. Reverse Words in a String
  * Given an input string s, reverse the order of the words.
@@ -37,5 +35,29 @@ public class _151ReverseWords {
         List<String> wordList = Arrays.asList(s.split("\\s+")); // split by white space
         Collections.reverse(wordList);
         return String.join(" ", wordList);
+    }
+
+    public String reverseWords(String s) {
+        int left = 0, right = s.length() - 1;
+        // remove leading spaces
+        while (left <= right && s.charAt(left) == ' ') left++;
+        //remove trailing spaces
+        while(left <= right && s.charAt(right) == ' ') right--;
+
+        Deque<String> d = new ArrayDeque<>();
+        StringBuilder word = new StringBuilder();
+        // push word by word in front of the deque
+        while(left <= right) {
+            char c = s.charAt(left);
+            if((word.length() != 0) && (c==' ')){
+                d.offerFirst(word.toString());
+                word.setLength(0);
+            } else if(c!=' ') {
+                word.append(c);
+            }
+            left++;
+        }
+        d.offerFirst(word.toString());
+        return String.join(" ", d);
     }
 }
