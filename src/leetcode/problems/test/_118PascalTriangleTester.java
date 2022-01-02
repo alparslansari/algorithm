@@ -1,5 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
 
+import leetcode.problems._118PascalTriangle;
 import leetcode.utilities.Collections;
 
 import java.util.ArrayList;

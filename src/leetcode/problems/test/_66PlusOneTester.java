@@ -1,4 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
+
+import leetcode.problems._66PlusOne;
 
 import java.util.Arrays;
 

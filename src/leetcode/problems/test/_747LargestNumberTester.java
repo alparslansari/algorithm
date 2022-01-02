@@ -1,4 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
+
+import leetcode.problems._747LargestNumber;
 
 public class _747LargestNumberTester {
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
 
+import leetcode.problems._189RotateArray;
 import leetcode.utilities.TesterHelper;
 
 public class _189RotateArrayTester {

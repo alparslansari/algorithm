@@ -1,5 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
 
+import leetcode.problems._344ReverseString;
 import leetcode.utilities.TesterHelper;
 
 public class _344ReverseStringTester {

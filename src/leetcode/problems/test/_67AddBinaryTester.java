@@ -1,4 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
+
+import leetcode.problems._67AddBinaryv1;
 
 public class _67AddBinaryTester {
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
+
+import leetcode.problems._724PivotIndex;
 
 import java.util.Arrays;
 

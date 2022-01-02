@@ -1,4 +1,6 @@
-package leetcode.problems;
+package leetcode.problems.test;
+
+import leetcode.problems._498DiagonalTraverse;
 
 import java.util.Arrays;
 
