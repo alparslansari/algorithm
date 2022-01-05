@@ -7,6 +7,19 @@ public class TesterHelper {
     public static final String PASSED = "Test is passed.";
     public static final String FAILED = "Test is failed.";
 
+    public boolean check(boolean expected, boolean output)
+    {
+        if(expected == output) {
+            print(PASSED,expected,output);
+            return true;
+        } else
+        {
+            print(FAILED,expected,output);
+            return false;
+        }
+
+    }
+
     public boolean check(int expected, int output)
     {
         if(expected == output) {
