@@ -1,4 +1,4 @@
-package leetcode.array.models;
+package leetcode.datastructures.array.models;
 
 // A simple definition for a DVD.
 public class DVD {

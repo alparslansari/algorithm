@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.datastructures.array;
 
 public class RepeatedDeletions {
     public int[] copyWithRemovedDuplicates(int[] nums) {

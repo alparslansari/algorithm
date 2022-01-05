@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.datastructures.array;
 
 public class StringsProblems {
     public static void main(String[] args) {

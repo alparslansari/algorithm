@@ -1,6 +1,6 @@
-package leetcode.array;
+package leetcode.datastructures.array;
 
-import leetcode.array.models.DVD;
+import leetcode.datastructures.array.models.DVD;
 
 public class DVDPlayer {
     public static void main(String[] args) {
