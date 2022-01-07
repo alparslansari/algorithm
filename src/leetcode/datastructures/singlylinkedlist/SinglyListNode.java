@@ -1,9 +1,13 @@
 package leetcode.datastructures.singlylinkedlist;
 
-public class SinglyListNode {
-    int val;
+/**
+ * Design a generic singly linked list node
+ * @param <T>
+ */
+public class SinglyListNode<T> {
+    T val;
     SinglyListNode next;
-    SinglyListNode(int ele) {
+    SinglyListNode(T ele) {
         this.val = ele;
     }
 }
