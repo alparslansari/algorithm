@@ -1,20 +1,20 @@
 package leetcode.datastructures.singlylinkedlist;
 
-class ListNode {
+class DoubleListNode {
     int val;
-    ListNode next;
-    ListNode prev;
-    ListNode(int x) { val = x; }
+    DoubleListNode next;
+    DoubleListNode prev;
+    DoubleListNode(int x) { val = x; }
 }
 
 public class MyDoublelyLinkedList {
     int size;
     // sentinel nodes as pseudo-head and pseudo-tail
-    ListNode head, tail;
+    DoubleListNode head, tail;
     public MyDoublelyLinkedList() {
         size = 0;
-        head = new ListNode(0);
-        tail = new ListNode(0);
+        head = new DoubleListNode(0);
+        tail = new DoubleListNode(0);
         head.next = tail;
         tail.prev = head;
     }
@@ -26,7 +26,7 @@ public class MyDoublelyLinkedList {
 
         // choose the fastest way: to move from the head
         // or to move from the tail
-        ListNode curr = head;
+        DoubleListNode curr = head;
         if (index + 1 < size - index)
             for(int i = 0; i < index + 1; ++i) curr = curr.next;
         else {
@@ -39,10 +39,10 @@ public class MyDoublelyLinkedList {
 
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
     public void addAtHead(int val) {
-        ListNode pred = head, succ = head.next;
+        DoubleListNode pred = head, succ = head.next;
 
         ++size;
-        ListNode toAdd = new ListNode(val);
+        DoubleListNode toAdd = new DoubleListNode(val);
         toAdd.prev = pred;
         toAdd.next = succ;
         pred.next = toAdd;
@@ -51,10 +51,10 @@ public class MyDoublelyLinkedList {
 
     /** Append a node of value val to the last element of the linked list. */
     public void addAtTail(int val) {
-        ListNode succ = tail, pred = tail.prev;
+        DoubleListNode succ = tail, pred = tail.prev;
 
         ++size;
-        ListNode toAdd = new ListNode(val);
+        DoubleListNode toAdd = new DoubleListNode(val);
         toAdd.prev = pred;
         toAdd.next = succ;
         pred.next = toAdd;
@@ -72,7 +72,7 @@ public class MyDoublelyLinkedList {
         if (index < 0) index = 0;
 
         // find predecessor and successor of the node to be added
-        ListNode pred, succ;
+        DoubleListNode pred, succ;
         if (index < size - index) {
             pred = head;
             for(int i = 0; i < index; ++i) pred = pred.next;
@@ -86,7 +86,7 @@ public class MyDoublelyLinkedList {
 
         // insertion itself
         ++size;
-        ListNode toAdd = new ListNode(val);
+        DoubleListNode toAdd = new DoubleListNode(val);
         toAdd.prev = pred;
         toAdd.next = succ;
         pred.next = toAdd;
@@ -99,7 +99,7 @@ public class MyDoublelyLinkedList {
         if (index < 0 || index >= size) return;
 
         // find predecessor and successor of the node to be deleted
-        ListNode pred, succ;
+        DoubleListNode pred, succ;
         if (index < size - index) {
             pred = head;
             for(int i = 0; i < index; ++i) pred = pred.next;
