@@ -2,16 +2,16 @@ package leetcode.datastructures.singlylinkedlist;
 
 class ListNode {
     int val;
-    ListNode next;
+    DoubleListNode next;
     ListNode(int x) { val = x; }
 }
 
 public class MyLinkedList {
     int size;
-    ListNode head;  // sentinel node as pseudo-head
+    DoubleListNode head;  // sentinel node as pseudo-head
     public MyLinkedList() {
         size = 0;
-        head = new ListNode(0);
+        head = new DoubleListNode(0);
     }
 
     /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
@@ -19,7 +19,7 @@ public class MyLinkedList {
         // if index is invalid
         if (index < 0 || index >= size) return -1;
 
-        ListNode curr = head;
+        DoubleListNode curr = head;
         // index steps needed
         // to move from sentinel node to wanted index
         for(int i = 0; i < index + 1; ++i) curr = curr.next;
@@ -48,11 +48,11 @@ public class MyLinkedList {
 
         ++size;
         // find predecessor of the node to be added
-        ListNode pred = head;
+        DoubleListNode pred = head;
         for(int i = 0; i < index; ++i) pred = pred.next;
 
         // node to be added
-        ListNode toAdd = new ListNode(val);
+        DoubleListNode toAdd = new DoubleListNode(val);
         // insertion itself
         toAdd.next = pred.next;
         pred.next = toAdd;
@@ -65,7 +65,7 @@ public class MyLinkedList {
 
         size--;
         // find predecessor of the node to be deleted
-        ListNode pred = head;
+        DoubleListNode pred = head;
         for(int i = 0; i < index; ++i) pred = pred.next;
 
         // delete pred.next
