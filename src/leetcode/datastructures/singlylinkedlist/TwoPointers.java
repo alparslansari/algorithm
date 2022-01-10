@@ -1,17 +1,11 @@
 package leetcode.datastructures.singlylinkedlist;
 
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
+import leetcode.models.ListNode;
 
 public class TwoPointers {
 
      public boolean example() {
+         ListNode head = null;
         // Initialize slow & fast pointers
         ListNode slow = head;
         ListNode fast = head;
