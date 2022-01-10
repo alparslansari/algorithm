@@ -34,6 +34,20 @@ public class _206ReverseLinkedList {
         return prev;
     }
 
+    public ListNode reverseListV2(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+        ListNode currentHead = head;
+        while (head.next != null) {
+            ListNode p = head.next;
+            head.next = p.next;
+            p.next = currentHead;
+            currentHead = p;
+        }
+        return currentHead;
+    }
+
     public ListNode reverseListRecursion(ListNode head) {
         if(head==null || head.next == null) return head;
         ListNode p = reverseListRecursion(head.next);
