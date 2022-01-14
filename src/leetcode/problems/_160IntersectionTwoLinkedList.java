@@ -45,6 +45,7 @@ import java.util.Set;
  *     intersectVal is 0 if listA and listB do not intersect.
  *     intersectVal == listA[skipA] == listB[skipB] if listA and listB intersect.
  */
+/**
 class ListNode {
     int val;
     ListNode next;
@@ -53,6 +54,8 @@ class ListNode {
         next = null;
     }
 }
+*/
+import leetcode.models.ListNode;
 
 public class _160IntersectionTwoLinkedList {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
@@ -68,12 +71,13 @@ public class _160IntersectionTwoLinkedList {
         return null;
     }
 
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNodeTwoPointer(ListNode headA, ListNode headB) {
         ListNode p1 = headA;
         ListNode p2 = headB;
         while(p1 != p2) {
             p1 = p1 == null? headB : p1.next;
             p2 = p2 == null? headA : p2.next;
         }
+        return p1;
     }
 }

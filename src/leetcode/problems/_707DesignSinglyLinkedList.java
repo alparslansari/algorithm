@@ -1,11 +1,12 @@
 package leetcode.problems;
 
+/**
 class ListNode {
     int val;
     ListNode next;
     ListNode(int x) { val = x; }
 }
-
+*/
 public class _707DesignSinglyLinkedList {
     int size;
     ListNode head;  // sentinel node as pseudo-head

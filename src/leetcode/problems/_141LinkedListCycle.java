@@ -27,6 +27,7 @@ package leetcode.problems;
  *
  * Follow up: Can you solve it using O(1) (i.e. constant) memory?
  */
+/**
 class ListNode {
     int val;
     ListNode next;
@@ -35,7 +36,7 @@ class ListNode {
         next = null;
     }
 }
-
+*/
 public class _141LinkedListCycle {
 
     public boolean hasCycle(ListNode head)
