@@ -28,7 +28,7 @@ public class _136SingleNumber {
             if(hashTable.get(num)==1) return num;
         return 0;
     }
-    
+
     public int singleNumberV2(int[] nums) {
         HashMap<Integer, Integer> hashTable = new HashMap<>();
         for(int i=0;i<nums.length;i++)
