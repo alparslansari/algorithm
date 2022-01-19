@@ -1,5 +1,7 @@
 package leetcode.problems;
 
+import leetcode.models.TreeNode;
+
 public class _705HashSetDesignII {
 
     MyHashSet obj = new MyHashSet();
@@ -60,16 +62,6 @@ public class _705HashSetDesignII {
         public boolean exists(Integer key) {
             TreeNode node = this.tree.searchBST(this.tree.root, key);
             return (node != null);
-        }
-    }
-
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
         }
     }
 
