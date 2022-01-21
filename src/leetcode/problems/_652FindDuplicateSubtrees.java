@@ -1,6 +1,6 @@
 package leetcode.problems;
 
-import leetcode.models.TreeNode;
+import leetcode.models.TreeNodePrimitive;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -8,14 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class _652FindDuplicateSubtrees {
-    public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
+    public List<TreeNodePrimitive> findDuplicateSubtrees(TreeNodePrimitive root) {
         Map<Integer, Integer> map = new HashMap<>();
-        List<TreeNode> result = new LinkedList<>();
+        List<TreeNodePrimitive> result = new LinkedList<>();
         dfs(root, result, map);
         return result;
     }
 
-    public String dfs(TreeNode node, List<TreeNode> result, Map<Integer,Integer> map){
+    public String dfs(TreeNodePrimitive node, List<TreeNodePrimitive> result, Map<Integer,Integer> map){
 
         //null will be define to N
         if(node == null) return "N";

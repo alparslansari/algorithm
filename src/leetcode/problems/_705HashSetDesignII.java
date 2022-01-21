@@ -1,6 +1,6 @@
 package leetcode.problems;
 
-import leetcode.models.TreeNode;
+import leetcode.models.TreeNodePrimitive;
 
 public class _705HashSetDesignII {
 
@@ -60,24 +60,24 @@ public class _705HashSetDesignII {
         }
 
         public boolean exists(Integer key) {
-            TreeNode node = this.tree.searchBST(this.tree.root, key);
+            TreeNodePrimitive node = this.tree.searchBST(this.tree.root, key);
             return (node != null);
         }
     }
 
     class BSTree {
-        TreeNode root = null;
+        TreeNodePrimitive root = null;
 
-        public TreeNode searchBST(TreeNode root, int val) {
+        public TreeNodePrimitive searchBST(TreeNodePrimitive root, int val) {
             if (root == null || val == root.val)
                 return root;
 
             return val < root.val ? searchBST(root.left, val) : searchBST(root.right, val);
         }
 
-        public TreeNode insertIntoBST(TreeNode root, int val) {
+        public TreeNodePrimitive insertIntoBST(TreeNodePrimitive root, int val) {
             if (root == null)
-                return new TreeNode(val);
+                return new TreeNodePrimitive(val);
 
             if (val > root.val)
                 // insert into the right subtree
@@ -94,7 +94,7 @@ public class _705HashSetDesignII {
         /*
          * One step right and then always left
          */
-        public int successor(TreeNode root) {
+        public int successor(TreeNodePrimitive root) {
             root = root.right;
             while (root.left != null)
                 root = root.left;
@@ -104,14 +104,14 @@ public class _705HashSetDesignII {
         /*
          * One step left and then always right
          */
-        public int predecessor(TreeNode root) {
+        public int predecessor(TreeNodePrimitive root) {
             root = root.left;
             while (root.right != null)
                 root = root.right;
             return root.val;
         }
 
-        public TreeNode deleteNode(TreeNode root, int key) {
+        public TreeNodePrimitive deleteNode(TreeNodePrimitive root, int key) {
             if (root == null)
                 return null;
 
