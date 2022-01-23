@@ -62,3 +62,7 @@ public class BFSTemplate {
         return -1;          // there is no path from root to target
     }
     */
+
+    /**
+     * See 286
+     */
