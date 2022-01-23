@@ -14,6 +14,11 @@ public class MyQueue {
     }
 
     /** Insert an element into the queue. Return true if the operation is successful. */
+    public boolean enQueue(int x) {
+        data.add(x);
+        return true;
+    }
+    /** Delete an element from the queue. Return true if the operation is successful. */
     public boolean deQueue() {
         if(isEmpty() == true) return false;
         p_start++;
@@ -27,5 +32,4 @@ public class MyQueue {
     public boolean isEmpty() {
         return p_start >= data.size();
     }
-
 }
