@@ -1,3 +1,5 @@
+package leetcode.problems.practices;
+
 public class EvenIndex {
 
     public static boolean isAtEvenIndex(String s, char item) {

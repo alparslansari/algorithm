@@ -1,3 +1,5 @@
+package leetcode.problems.practices;
+
 public class NormalizeString {
 
     public static String normalizeString(String s) {

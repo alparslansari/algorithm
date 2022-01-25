@@ -1,3 +1,5 @@
+package leetcode.problems.practices;
+
 public class UpperCase {
 
     public static boolean isUpperCase(String s) {

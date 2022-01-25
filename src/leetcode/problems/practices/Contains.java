@@ -1,3 +1,5 @@
+package leetcode.problems.practices;
+
 public class Contains {
 
     public static void parseContents(String s) {

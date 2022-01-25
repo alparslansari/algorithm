@@ -1,3 +1,5 @@
+package leetcode.problems.practices;
+
 public class PasswordCheck {
 
     public static boolean isPasswordComplex(String s) {
