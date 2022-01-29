@@ -134,3 +134,45 @@ the usage of other elements, then we should consider using dynamic programming t
 
     These characteristics should only be used as guidelines - while they are extremely common in DP problems,
     at the end of the day DP is a very broad topic.
+
+# Framework for DP Problems
+To solve a DP problem, we need to combine 3 things:
+
+1. A function or data structure that will compute/contain the answer to the problem for every given state.
+2. A recurrence relation to transition between states.
+3. Base cases, so that our recurrence relation doesn't go on infinitely.
+
+
+    class Solution {
+        private HashMap<Integer, Integer> memo = new HashMap<>();
+        private int dp(int i) {
+            if (i <= 2) return i;
+            // Instead of just returning dp(i - 1) + dp(i - 2), calculate it once and then
+            // store it inside a hashmap to refer to in the future
+            if (!memo.containsKey(i)) {
+                memo.put(i, dp(i - 1) + dp(i - 2));
+            }
+            return memo.get(i);
+        }
+        
+        public int climbStairs(int n) {
+            return dp(n);
+        }
+    }
+With memoization, our time complexity drops to O(n) - astronomically better.
+
+
+    class Solution {
+        public int climbStairs(int n) {
+            if (n == 1) return 1;
+            // An array that represents the answer to the problem for a given state
+            int[] dp = new int[n + 1]; 
+            dp[1] = 1; // Base cases
+            dp[2] = 2; // Base cases
+            for (int i = 3; i <= n; i++) {
+                dp[i] = dp[i - 1] + dp[i - 2]; // Recurrence relation
+            }
+        
+            return dp[n];
+        }
+    }
