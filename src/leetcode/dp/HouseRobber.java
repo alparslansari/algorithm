@@ -2,6 +2,9 @@ package leetcode.dp;
 
 import java.util.HashMap;
 
+/**
+ * Top-down approach
+ */
 public class HouseRobber {
     private HashMap<Integer, Integer> memo = new HashMap<>();
     private int[] nums;
