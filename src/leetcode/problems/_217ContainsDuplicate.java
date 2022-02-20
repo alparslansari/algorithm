@@ -1,5 +1,6 @@
 package leetcode.problems;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -24,11 +25,22 @@ import java.util.Set;
 public class _217ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
-        Set<Integer> set = new HashSet<>(nums.length);
+        Set<Integer> set = new HashSet<>();
         for(int num:nums){
             if(set.contains(num)) return true;
             set.add(num);
         }
         return false;
+    }
+
+    public boolean containsDuplicateV2(int[] nums) {
+        Arrays.sort(nums);
+        int prev = nums[0];
+        for(int i=1;i<nums.length;i++)
+        {
+            if(prev == nums[i]) return true;
+            prev = nums[i];
+        }
+        return false; // elements are distinct
     }
 }
