@@ -15,6 +15,10 @@ import java.util.Arrays;
  * Example 2:
  * Input: nums = [1,2,3,4], k = 3
  * Output: false
+ * Constraints:
+ *  1 <= k <= nums.length <= 16
+ *  1 <= nums[i] <= 104
+ *  The frequency of each element is in the range [1, 4].
  */
 public class _698PartitionToKEqualSumSubsets {
     private boolean backtrack(int[] arr, int index, int count, int currSum, int k, int targetSum, boolean[] taken) {
