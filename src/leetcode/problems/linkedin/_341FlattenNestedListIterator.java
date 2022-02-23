@@ -1,52 +1,34 @@
 package leetcode.problems.linkedin;
 
-/**
- * 341. Flatten Nested List Iterator
- * You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
- * <p>
+/** 341. Flatten Nested List Iterator
+ * You are given a nested list of integers nestedList. Each element is either an integer
+ * or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
+ *
  * Implement the NestedIterator class:
- * <p>
  * NestedIterator(List<NestedInteger> nestedList) Initializes the iterator with the nested list nestedList.
- * int next() Returns the next integer in the nested list.
- * boolean hasNext() Returns true if there are still some integers in the nested list and false otherwise.
- * <p>
+ *  int next() Returns the next integer in the nested list.
+ *  boolean hasNext() Returns true if there are still some integers in the nested list and
+ *  false otherwise.
+ *
  * Your code will be tested with the following pseudocode:
- * <p>
  * initialize iterator with nestedList
  * res = []
  * while iterator.hasNext()
- * append iterator.next() to the end of res
+ *     append iterator.next() to the end of res
  * return res
- * <p>
+ *
  * If res matches the expected flattened list, then your code will be judged as correct.
- * <p>
- * <p>
- * <p>
  * Example 1:
- * <p>
  * Input: nestedList = [[1,1],2,[1,1]]
  * Output: [1,1,2,1,1]
  * Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,1,2,1,1].
- * <p>
+ *
  * Example 2:
- * <p>
  * Input: nestedList = [1,[4,[6]]]
  * Output: [1,4,6]
  * Explanation: By calling next repeatedly until hasNext returns false, the order of elements returned by next should be: [1,4,6].
- * <p>
- * <p>
- * <p>
- * Constraints:
- * <p>
- * 1 <= nestedList.length <= 500
- * The values of the integers in the nested list is in the range [-106, 106].
  */
 
-import leetcode.models.NestedInteger;
-
-import java.util.*;
-
-public class _341FlattenNestedListIterator {
     /**
      * // This is the interface that allows for creating nested lists.
      * // You should not implement it, or speculate about its implementation
@@ -65,14 +47,17 @@ public class _341FlattenNestedListIterator {
      * }
      */
 
+import leetcode.models.NestedInteger;
 
-    public class NestedIterator implements Iterator<Integer> {
+import java.util.*;
+
+public class _341FlattenNestedListIterator implements Iterator<Integer> {
 
         // This time, our stack will hold list iterators instead of just lists.
-        private final Deque<ListIterator<NestedInteger>> stackOfIterators = new ArrayDeque();
+        private Deque<ListIterator<NestedInteger>> stackOfIterators = new ArrayDeque();
         private Integer peeked = null;
 
-        public NestedIterator(List<NestedInteger> nestedList) {
+        public _341FlattenNestedListIterator(List<NestedInteger> nestedList) {
             // Make an iterator with the input and put it on the stack.
             // Note that creating a list iterator is an O(1) operation.
             stackOfIterators.addFirst(nestedList.listIterator());
@@ -140,4 +125,4 @@ public class _341FlattenNestedListIterator {
  * NestedIterator i = new NestedIterator(nestedList);
  * while (i.hasNext()) v[f()] = i.next();
  */
-}
+
